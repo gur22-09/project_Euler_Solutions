@@ -5,9 +5,9 @@ function primeFactor2(num){
     if(num%i===0){
       num=num/i;//this is the main deal breaker..
       let factor = i;
-      isPrime = true;
+      let isPrime = true;
 
-      for(j=2;j<factor;j++){
+      for(let j=2;j<factor;j++){
         if(factor % j ===0){
           isPrime= false;
         }
