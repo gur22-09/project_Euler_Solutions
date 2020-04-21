@@ -10,7 +10,7 @@ const nthPrime = n =>{
     }
   }
    
-  return primeNum;
+  return primeNum.pop();
 }
 
 
