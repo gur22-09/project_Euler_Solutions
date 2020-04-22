@@ -1,46 +1,17 @@
-function sumOfMultiples(n){
-  let sum = 0;
-  let adjust = 0;
+function problem1(n){
+  if(n<=1) return undefined;
+  var  n=n-1;
+  let largestIn3Series = (n - n%3);
+  let largestIn5Series = (n - n%5);
+  let largestIn15Series = (n-n%15);
+  console.log(largestIn3Series,largestIn5Series,largestIn15Series)
+  const series3Sum = ((largestIn3Series/3)/2)*(3+largestIn3Series);
 
-  for(let i=1;i<n;i++){
-     if(i%3 === 0){
-       sum += i;
-     }
-  }
+  const series5Sum = ((largestIn5Series/5)/2)*(5+largestIn5Series);
 
-  
-  for(let i=1;i<n;i++){
-     if(i%5 === 0){
-       sum += i;
-     }
-  }
+  const series15Sum = ((largestIn15Series/15)/2)*(15+largestIn15Series);
 
-  for(let i=1;i<n;i++){
-     if(i%15 === 0){
-       adjust += i;
-     }
-  }
 
-  return sum-adjust;
+  console.log(series3Sum,series5Sum,series15Sum)
+  return series3Sum + series5Sum - series15Sum;
 }
-//O(n)
-
-console.log(sumOfMultiples(1000));
-
-function sumOfMultiples2(n){
-  const largestNumIn3series = (n%3)*3;
-  const largestNumIn5series = (n%5)*5;
-  const largestNumIn15series = (n%5)*5;
-  
-  const sum3 = (largestNumIn3series/3)/2*(3+largestNumIn3series);
-
-  const sum5 = (largestNumIn5series/5)/2*(5+largestNumIn3series);
-
-  const sum15 = (largestNumIn15series/15)/2*(15+largestNumIn3series);
-  
-
-  return sum3+sum5-sum15
-  
-}
-//O(1)
-console.log(sumOfMultiples(1000));
