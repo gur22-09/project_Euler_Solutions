@@ -1,7 +1,7 @@
 const nthPrime = n =>{
   let primeNum = [];
   
-  if(n<=0 || typeof(n) !== 'number') return undefined;
+  if(n<=0 || isNAn(n)) return undefined;
 
   for(let i=2;primeNum.length<n;i++){
     if(isPrime(i)){
