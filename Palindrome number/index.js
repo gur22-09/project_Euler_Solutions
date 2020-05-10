@@ -1,4 +1,4 @@
-let isPalindrome = (x) => {
+const  isPalindrome = (x) => {
     if(x<0 || isNaN(x)) return false;
     
     let reverse = 0;
