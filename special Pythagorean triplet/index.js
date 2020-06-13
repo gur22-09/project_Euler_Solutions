@@ -6,9 +6,9 @@ function triplet(n){
      for(let b=a+1;b<n;b++){
          let c = sum -a-b;
          if(c<a+b){
-             if(Math.pow(c,2)===Math.pow(a,2)+Math.pow(b,2)){
-                 return a*b*c;
-             }
+             if(Math.pow(c,2)===Math.pow(a,2)+Math.pow(b,2))
+             return a*b*c;
+             
          }
      }
  }
